@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
@@ -95,7 +94,6 @@ public class PlayerController : MonoBehaviour
         
         var totalMovement = _walkMovement * Speed;
         _characterController.SimpleMove(transform.forward * totalMovement.y + transform.right * totalMovement.x);
-        // _characterController.Move(Physics.gravity * Time.deltaTime);
 
         #endregion
 
